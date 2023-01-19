@@ -29,14 +29,14 @@ namespace Programming_Assingment_1
             return Age;
         }
 
-        public string GetNoise()
-        {
-            return Noise;
-        }
-
         public double GetWeight()
         {
             return Weight;
+        }
+
+        public string GetNoise()
+        {
+            return Noise;
         }
 
         public abstract void printInfo();

@@ -16,11 +16,14 @@ namespace Programming_Assingment_1
     {
         public override void printInfo()
         {
-            Console.WriteLine("This gorilla's name is: ");
-            Console.WriteLine("This gorilla's name is: ");
-            Console.WriteLine("This gorilla's name is: ");
-            Console.WriteLine("This gorilla's name is: ");
+            Console.WriteLine("This cat's name is: " + GetName());
+            Console.WriteLine(GetName() + "'s age is " + GetAge() + " years");
+            Console.WriteLine(GetName() + "'s weight is " + GetWeight() + " pounds");
+            Console.WriteLine("Shhh. Listen... " + GetName() + "'s Calling out to us: " +
+                GetNoise());
         }
+        }
+    }
 
         public override void makeNoise()
         {
