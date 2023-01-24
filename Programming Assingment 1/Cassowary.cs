@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Programming_Assingment_1
 {
-    class Cassowary : Animal
+    class Cassowary : Animal(name, age, noise, weight)
     {
         public override void printInfo()
         {
