@@ -16,22 +16,24 @@ namespace Programming_Assingment_1
     {
         public override void printInfo()
         {
-            Console.WriteLine("This cat's name is: " + GetName());
+            Console.WriteLine("This Cassowary's name is: " + GetName());
             Console.WriteLine(GetName() + "'s age is " + GetAge() + " years");
             Console.WriteLine(GetName() + "'s weight is " + GetWeight() + " pounds");
             Console.WriteLine("Shhh. Listen... " + GetName() + "'s Calling out to us: " +
                 GetNoise());
         }
-    }
-
         public override void makeNoise()
         {
-            // Need to implement
+            Console.WriteLine(GetNoise());
         }
 
         public override void ageUp()
         {
-            // Need to implement
+            Console.WriteLine("Enter the number of years you would like to add on: ");
+            int ageIncrease = int.Parse(Console.ReadLine());
+            int newAge = ageIncrease + GetAge();
+            Console.WriteLine("New age " + newAge);
         }
     }
 }
+
