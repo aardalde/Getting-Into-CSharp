@@ -12,8 +12,12 @@ using System.Threading.Tasks;
 
 namespace Programming_Assingment_1
 {
-    class Gorilla : Animal(name, age, noise, weight)
+    class Gorilla : Animal
     {
+        public Gorilla(string name, int age, string noise, double weight) : base(name, age, noise, weight)
+        {
+            
+        }
         public override void printInfo()
         {
             Console.WriteLine("This gorilla's name is: " + GetName());

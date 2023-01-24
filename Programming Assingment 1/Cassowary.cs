@@ -12,8 +12,12 @@ using System.Threading.Tasks;
 
 namespace Programming_Assingment_1
 {
-    class Cassowary : Animal(name, age, noise, weight)
-    {
+    class Cassowary : Animal
+    { 
+        public Cassowary(string name, int age, string noise, double weight) : base(name, age, noise, weight)
+        {
+
+        }
         public override void printInfo()
         {
             Console.WriteLine("This Cassowary's name is: " + GetName());

@@ -12,8 +12,16 @@ using System.Threading.Tasks;
 
 namespace Programming_Assingment_1
 {
-    class Cat : Animal(name, age, noise, weight)
+    class Cat : Animal
     {
+        public Cat(string name, int age, string noise, double weight) : base(name, age, noise, weight)
+        {
+            name = GetName();
+            age = GetAge();
+            noise = GetNoise();
+            weight = GetWeight();
+
+        }
         public override void printInfo()
         {
             Console.WriteLine("This cat's name is: " + GetName());

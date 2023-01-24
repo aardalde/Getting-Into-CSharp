@@ -18,7 +18,7 @@ namespace Programming_Assingment_1
         private int Age;
         private string Noise;
         private double Weight;
-
+        
         public Animal(string name, int age, string noise, double weight)
         {
             this.Name = name;
