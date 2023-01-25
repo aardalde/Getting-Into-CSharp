@@ -23,13 +23,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The base class paramerterized constructor
+         *  The base class paramerterized constructor initializes private member variables to be used by the child classes 
          * 
          * Inputs:
-         *  The...
+         *  string name, int age, string noise, double weight
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public Animal(string name, int age, string noise, double weight)
         {
@@ -41,13 +41,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that allows the child classes to call and retrieve the current name
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  string Name
          */
         public string GetName()
         {
@@ -56,13 +56,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that allows the child classes to call and retrieve the current age
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  int Age
          */
         public int GetAge()
         {
@@ -71,13 +71,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that allows the child classes to call and retrieve the current weight
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  double Weight
          */
         public double GetWeight()
         {
@@ -86,53 +86,24 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that allows the child classes to call and retrieve the current noise
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  string Noise
          */
         public string GetNoise()
         {
             return Noise;
         }
 
-        /*
-         * Description:
-         *  The...
-         * 
-         * Inputs:
-         *  The...
-         * 
-         * Returns:
-         *  The...
-         */
-        public abstract void printInfo();
+        // Description for implemented abstract functions found in the child classes
+        public abstract void printInfo(); 
 
-        /*
-         * Description:
-         *  The...
-         * 
-         * Inputs:
-         *  The...
-         * 
-         * Returns:
-         *  The...
-         */
         public abstract void makeNoise();
 
-        /*
-         * Description:
-         *  The...
-         * 
-         * Inputs:
-         *  The...
-         * 
-         * Returns:
-         *  The...
-         */
         public abstract void ageUp();
     }
 }

@@ -18,28 +18,31 @@ namespace Programming_Assingment_1
     {
         /*
          * Description:
-         *  The...
+         *  A parameterized constructor that inherits the base class parameterized constructor to allow the use of the private member variables
          * 
          * Inputs:
-         *  The...
+         *  string name, int age, string noise, double weight
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public Cassowary(string name, int age, string noise, double weight) : base(name, age, noise, weight)
         {
-
+            name = GetName();
+            age = GetAge();
+            noise = GetNoise();
+            weight = GetWeight();
         }
 
-                /*
+        /*
          * Description:
-         *  The...
+         *  A function that prints out to the user all the associated information about the cassowary
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void printInfo()
         {
@@ -52,13 +55,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that writes to the console the current sound the cassowary makes
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void makeNoise()
         {
@@ -67,13 +70,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that reads from the user the number of years they would like to increase the age of the cassowary by
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void ageUp()
         {

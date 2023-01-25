@@ -18,13 +18,13 @@ namespace Programming_Assingment_1
     {
         /*
          * Description:
-         *  The...
+         *  A parameterized constructor that inherits the base class parameterized constructor to allow the use of the private member variables
          * 
          * Inputs:
-         *  The...
+         *  string name, int age, string noise, double weight
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public Cat(string name, int age, string noise, double weight) : base(name, age, noise, weight)
         {
@@ -37,13 +37,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that prints out to the user all the associated information about the cat
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void printInfo()
         {
@@ -56,13 +56,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that writes to the console the current sound the cat makes
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void makeNoise()
         {
@@ -71,13 +71,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that reads from the user the number of years they would like to increase the age of the cat by
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void ageUp()
         {

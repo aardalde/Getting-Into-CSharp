@@ -3,7 +3,7 @@
  * Date: January 24, 2023
  * File: Gorilla.cs
  * Description: This file implements the child class behaviors of the Gorilla animal. Like the other child classes, it inherits and implements the public methods from its parent class
- * Programming Enviornment: Visual Studio 2019, Windows 11
+ * Programming Enviornment: Visual Studio 2019, Windows 11 
  */
 
 using System;
@@ -16,31 +16,33 @@ namespace Programming_Assingment_1
 {
     class Gorilla : Animal
     {
-
         /*
          * Description:
-         *  The...
+         *  A parameterized constructor that inherits the base class parameterized constructor to allow the use of the private member variables
          * 
          * Inputs:
-         *  The...
+         *  string name, int age, string noise, double weight
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public Gorilla(string name, int age, string noise, double weight) : base(name, age, noise, weight)
         {
-
+            name = GetName();
+            age = GetAge();
+            noise = GetNoise();
+            weight = GetWeight();
         }
 
         /*
          * Description:
-         *  The...
+         *  A function that prints out to the user all the associated information about the gorilla
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void printInfo()
         {
@@ -53,13 +55,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that writes to the console the current sound the gorilla makes
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void makeNoise()
         {
@@ -68,13 +70,13 @@ namespace Programming_Assingment_1
 
         /*
          * Description:
-         *  The...
+         *  A function that reads from the user the number of years they would like to increase the age of the gorilla by
          * 
          * Inputs:
-         *  The...
+         *  N/A
          * 
          * Returns:
-         *  The...
+         *  N/A
          */
         public override void ageUp()
         {
