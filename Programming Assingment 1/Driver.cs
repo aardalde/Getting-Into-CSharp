@@ -1,8 +1,10 @@
-﻿// Aaron Alden
-// Dr. Ericson
-// CSCI 352
-// January 16, 2023
-// Driver.cs
+﻿/* 
+ * Author: Aaron Alden
+ * Date: January 24, 2023
+ * File: Driver.cs
+ * Description: This file presents the user with a menu-driven interface. They can select options such as adding a new animal, hearing the sound it makes, etc.
+ * Programming Enviornment: Visual Studio 2019, Windows 11
+ */
 
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,7 @@ namespace Programming_Assingment_1
     {
         static void Main(string[] args)
         {
-            string userChoice;
+            string userChoice, subMenuChoice;
             int numberChoice;
 
             Console.WriteLine("Welcome!");
@@ -33,7 +35,7 @@ namespace Programming_Assingment_1
                 Console.WriteLine("(5) Exit the program");
                 Console.WriteLine("=====================================");
                 Console.WriteLine("Enter your choice: ");
-                
+
                 userChoice = Console.ReadLine();
 
                 if (!Int32.TryParse(userChoice, out numberChoice)) continue; //This checks to make sure that the user input is a number
@@ -46,11 +48,11 @@ namespace Programming_Assingment_1
                     Console.WriteLine("(3) Gorilla");
                     Console.WriteLine("=====================================");
                     Console.WriteLine("Enter your choice: ");
-                    userChoice = Console.ReadLine();
-                    if (!Int32.TryParse(userChoice, out numberChoice)) continue;
+                    subMenuChoice = Console.ReadLine();
+                    if (!Int32.TryParse(subMenuChoice, out numberChoice)) continue;
 
-                    if(userChoice == "1")
-                    {                     
+                    if (subMenuChoice == "1")
+                    {
                         Console.WriteLine("Enter the name of the cat: ");
                         string animalName = Console.ReadLine();
                         Console.WriteLine("Enter the age of the cat: ");
@@ -66,8 +68,8 @@ namespace Programming_Assingment_1
                         cat.printInfo();
                         Console.WriteLine("=====================================");
                     }
-                    
-                    if(userChoice == "2")
+
+                    if (subMenuChoice == "2")
                     {
                         Console.WriteLine("Enter the name of the cassowary: ");
                         string animalName = Console.ReadLine();
@@ -85,7 +87,7 @@ namespace Programming_Assingment_1
                         Console.WriteLine("=====================================");
                     }
 
-                    if (userChoice == "3")
+                    if (subMenuChoice == "3")
                     {
                         Console.WriteLine("Enter the name of the gorilla: ");
                         string animalName = Console.ReadLine();
@@ -105,50 +107,19 @@ namespace Programming_Assingment_1
                 }
                 if (userChoice == "2")
                 {
-                    Console.WriteLine("Please enter the number of the option you would like to access: ");
-                    Console.WriteLine("=====================================");
-                    Console.WriteLine("(1) Your Cat's information");
-                    Console.WriteLine("(2) Your Cassowary's information");
-                    Console.WriteLine("(3) your Gorilla's information");
-                    Console.WriteLine("=====================================");
-                    Console.WriteLine("Enter your choice: ");
-                    userChoice = Console.ReadLine();
-                    if (!Int32.TryParse(userChoice, out numberChoice)) continue;
-
-                    if(userChoice == "1")
+                    Console.WriteLine("Please enter the name of the animal whose information you would like to access: ");
+                    string animalName = Console.ReadLine();
+                    for (int i = 0; i < animals.Count; i++)
                     {
-                        int temp = 0;
-                        Console.WriteLine("=====================================");
-                        animals[temp].printInfo();
-                        Console.WriteLine("=====================================");
-                    }
-                    
-                    if(userChoice == "2")
-                    {
-     
-                    }
-
-                    if (userChoice == "3")
-                    {
-
+                        if (animalName == animals[i].GetName())
+                        {
+                            Console.WriteLine("=====================================");
+                            animals[i].printInfo();
+                            Console.WriteLine("=====================================");
+                        }
                     }
                 }
-
-
-
-
-
-
-
-
-
-
-
                 if (userChoice == "3")
-                {
-                    Console.WriteLine("===========4=========================");
-                }
-                if (userChoice == "4")
                 {
                     Console.WriteLine("Enter the name of the animal whose age you wish to increase: ");
                     string animalName = Console.ReadLine();
@@ -157,6 +128,20 @@ namespace Programming_Assingment_1
                         if (animalName == animals[i].GetName())
                         {
                             animals[i].ageUp();
+                        }
+                    }
+                }
+                if (userChoice == "4")
+                {
+                    Console.WriteLine("Enter the name of the animal whose call you wish to hear: ");
+                    string animalName = Console.ReadLine();
+                    for (int i = 0; i < animals.Count; i++)
+                    {
+                        if (animalName == animals[i].GetName())
+                        {
+                            Console.WriteLine("=====================================");
+                            animals[i].makeNoise();
+                            Console.WriteLine("=====================================");
                         }
                     }
                 }
